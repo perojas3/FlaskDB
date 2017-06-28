@@ -62,6 +62,7 @@ def mongo():
 
 
 @app.route("/mongophp")
+def mongophp():
     banda = request.args.get("banda")
     #query = 'mongodb.
     return "hola"
