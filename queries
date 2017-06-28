@@ -4,7 +4,7 @@
   "database": "mongo",
   "description":
   "Aqui se despliega la información sobre los mensajes de los criminales",
-  "query": "myCollection.find( {\'mensaje\': \'Los Pimenteles\''} )"
+  "query": "myCollection.find({'mensaje': "Los Pimenteles"} )"
   },
   {
     "name": "Consulta2",
@@ -18,6 +18,6 @@
     "database": "mongo",
     "description":
       "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert( { \"attribute\": \"value\" } )"
+    "query": "myCollection.insert( { "attribute": "value"} )"
   }
 ]
