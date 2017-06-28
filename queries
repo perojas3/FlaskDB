@@ -1,16 +1,10 @@
 [
   {
-    "name": "Seleccionar todo",
-    "database": "postgres",
-    "description": "Una muy breve descripción",
-    "query": "SELECT * FROM mytable;"
-  },
-  {
-  "name": "Lorem ipsum dolor sit amet",
+  "name": "Consulta los mensajes de las bandas criminales",
   "database": "mongo",
   "description":
-  "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-  "query": "myCollection.find( {\"attribute\": \"value\"} )"
+  "Aqui se despliega la información sobre los mensajes de los criminales",
+  "query": "myCollection.find( {\"mensaje\": \"Los Pimenteles\"} )"
   },
   {
     "name": "Sebastián",
