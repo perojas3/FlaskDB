@@ -52,7 +52,7 @@ def home():
 @app.route("/mongo")
 def mongo():
     #query = request.args.get("query")
-    query = 'colletionprueba.find({fecha:"2016-03-02"},{}).pretty()'
+    query = 'colletionprueba.find({"fecha":"2016-03-02"},{}).pretty()'
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
