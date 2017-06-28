@@ -51,8 +51,7 @@ def home():
 
 @app.route("/mongo", methods=['GET', 'POST'])
 def mongo():
-    #query = request.args.get("query")
-    query = 'collectionprueba.find()'
+    query = request.args.get("query")
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
@@ -61,11 +60,6 @@ def mongo():
         return "ok"
 
 
-@app.route("/mongophp")
-def mongophp():
-    banda = request.args.get("banda")
-    #query = 'mongodb.
-    return "hola"
 
 
 
