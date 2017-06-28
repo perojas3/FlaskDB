@@ -17,7 +17,7 @@ def create_app():
 app = create_app()
 
 # REPLACE WITH YOUR DATABASE NAME
-MONGODATABASE = "myDatabase"
+MONGODATABASE = "prueba"
 MONGOSERVER = "localhost"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
@@ -51,7 +51,8 @@ def home():
 
 @app.route("/mongo")
 def mongo():
-    query = request.args.get("query")
+    #query = request.args.get("query")
+    query = 'colletionprueba.find({fecha:"2016-03-02"},{}).pretty()'
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
