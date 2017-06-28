@@ -7,10 +7,10 @@
   "query": "myCollection.find( {\"mensaje\": \"Los Pimenteles\"} )"
   },
   {
-    "name": "Quiero todo de mongo 😄",
+    "name": "Consulta2",
     "database": "mongo",
-    "description": "...",
-    "query": "myCollection.find()"
+    "description": "Dado un numero de telofono, se muestran k mensajes de estos",
+    "query": "Mycollection.find({fecha:"2017-31-05"},{}).limit("k").pretty()"
   },
   {
     "name": "Insertar a mongo",
