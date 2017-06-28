@@ -49,7 +49,7 @@ def home():
         return render_template('file.html', results=pairs)
 
 
-@app.route("/mongo")
+@app.route("/mongo", methods=['GET', 'POST'])
 def mongo():
     query = request.args.get("query")
     #query = 'colletionprueba.find({"fecha":"2016-03-02"},{})'
@@ -63,7 +63,7 @@ def mongo():
 
 @app.route("/mongophp")
     banda = request.args.get("banda")
-    #query = 'mongodb.colletionprueba.find({"fecha":"2016-03-02"},{})'
+    #query = 'mongodb.
     return "hola"
 
 
