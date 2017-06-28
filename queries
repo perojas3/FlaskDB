@@ -4,20 +4,20 @@
   "database": "mongo",
   "description":
   "Aqui se despliega la información sobre los mensajes de los criminales",
-  "query": "myCollection.find({'mensaje': "Los Pimenteles"} )"
+  "query": "myCollection.find({'mensaje': 'Los Pimenteles'})"
   },
   {
     "name": "Consulta2",
     "database": "mongo",
     "description": 
     "Dado un numero de telofono, se muestran k mensajes de estos",
-    "query": "myCollection.find({fecha:'2017-31-05'},{}).limit(10).pretty"
+    "query": "myCollection.find({fecha:'2017-31-05'},{}).limit(10)"
   },
   {
     "name": "Insertar a mongo",
     "database": "mongo",
     "description":
       "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert( { "attribute": "value"} )"
+    "query": "myCollection.insert({'attribute': 'value'})"
   }
 ]
