@@ -1,16 +1,10 @@
 [
   {
-  "name": "Consulta los mensajes de las bandas criminales",
+  "name": "Consulta1",
   "database": "mongo",
   "description":
   "Aqui se despliega la información sobre los mensajes de los criminales",
   "query": "myCollection.find( {\"mensaje\": \"Los Pimenteles\"} )"
-  },
-  {
-    "name": "Sebastián",
-    "database": "postgres",
-    "description": "Una consulta de Sebastián 🙋",
-    "query": "SELECT * FROM mytable WHERE nombre='Sebastián';"
   },
   {
     "name": "Quiero todo de mongo 😄",
