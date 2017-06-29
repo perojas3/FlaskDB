@@ -18,7 +18,7 @@ app = create_app()
 
 # REPLACE WITH YOUR DATABASE NAME
 MONGODATABASE = "prueba"
-MONGOSERVER = "hkp://keyserver.ubuntu.com"
+MONGOSERVER = "0.0.0.0"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
 mongodb = client[MONGODATABASE]
