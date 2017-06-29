@@ -52,18 +52,15 @@ def home():
 @app.route("/mongo", methods=['GET', 'POST'])
 def mongo():
     query = request.args.get('query')
+    query = query.replace('#','/')
+    results = eval('mongodb.' + query)
+    print("hola")
+    results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
-        if "search" in query:
-            r = eval('mongodb.collectionprueba.createIndex({"contenido":"text"})')
-        results = eval('mongodb.' + query)
-        results = json_util.dumps(results, sort_keys=True, indent=4)
+
         return render_template('mongo.html', results=results)
     else:
         return "ok"
-
-
-
-
 
 
 
