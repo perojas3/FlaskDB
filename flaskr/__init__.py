@@ -52,8 +52,7 @@ def home():
 @app.route("/mongo", methods=['GET', 'POST'])
 def mongo():
     query = request.args.get('query')
-    query = query.replace('#','/')
-    results = eval('mongodb.' + query)
+    results = eval('mongodb.collectionprueba.find({"ciudad":/Santiago/},{"numero":1,"ciudad":1})')
     print("hola")
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
