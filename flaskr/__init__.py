@@ -62,11 +62,10 @@ def mongo():
 
 @app.route("/postgres")
 def postgres():
-    query = request.args.get("query")
-    query.replace("%"," ")
+    #query = request.args.get("query")
+    query = "SELECT * FROM Restaurantes"
     cursor = postgresdb.cursor()
     cursor.execute(query)
-
     results = [[a for a in result] for result in cursor]
     return results
 
