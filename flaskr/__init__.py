@@ -55,6 +55,10 @@ def mongo():
     results = eval('mongodb.' + query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
+        if "search" in query:
+            r = eval('mongodb.collectionprueba.createIndex({"contenido":"text"})')
+        results = eval('mongodb.' + query)
+        results = json_util.dumps(results, sort_keys=True, indent=4)
         return render_template('mongo.html', results=results)
     else:
         return "ok"
