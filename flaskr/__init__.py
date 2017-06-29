@@ -52,7 +52,6 @@ def home():
 @app.route("/mongo", methods=['GET', 'POST'])
 def mongo():
     query = request.args.get('query')
-    ra = eval(mongodb.adminCommand({setParameter:true,textSearchEnabled:true}))
     r = eval('mongodb.collectionprueba.createIndex({"contenido":"text"})')
     results = eval('mongodb.collectionprueba.find({$text: {$search: "hablo"}},{"contenido":1})')
     results = json_util.dumps(results, sort_keys=True, indent=4)
