@@ -18,7 +18,7 @@ app = create_app()
 
 # REPLACE WITH YOUR DATABASE NAME
 MONGODATABASE = "prueba"
-MONGOSERVER = "localhost"
+MONGOSERVER = "query17-20.ing.puc.cl"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
 mongodb = client[MONGODATABASE]
@@ -59,6 +59,13 @@ def mongo():
     else:
         return "ok"
 
+@app.route("/postgres")
+def postgres():
+    query = request.args.get("query")
+    cursor = postgresdb.cursor()
+    cursor.execute(query)
+    results = [[a for a in result] for result in cursor]
+    return results
 
 
 
