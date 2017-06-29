@@ -51,8 +51,7 @@ def home():
 
 @app.route("/mongo", methods=['GET', 'POST'])
 def mongo():
-    #query = request.args.get('query')
-    query = collectionprueba.find({"$text":{"$search":%20"Datalab"}})
+    query = request.args.get('query')
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
