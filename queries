@@ -1,23 +1,23 @@
 [
   {
-  "name": "Consulta1",
-  "database": "mongo",
-  "description":
-  "Aqui se despliega la información sobre los mensajes de los criminales",
-  "query": "db.collectionprueba.find().pretty()"
-  },
-  {
-    "name": "Consulta2",
-    "database": "mongo",
-    "description": 
-    "Dado un numero de telofono, se muestran k mensajes de estos",
-    "query": "myCollection.find({fecha:'2017-31-05'},{id:1, numero:1}).limit(10)"
-  },
-  {
-    "name": "Insertar a mongo",
+    "name": "Mensajes de una fecha",
     "database": "mongo",
     "description":
-      "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert({'attribute': 'value'})"
+      "Recive una fecha x y retorna los numeros de los que tienen mensajes en esa fechas",
+    "query": "db.colletionprueba.find({fecha:"2017-31-05"},{})"
+  }
+  {
+    "name": "Ultimos k mensajes de un numero",
+    "database": "postgres",
+    "description":
+      "Recive un numero x y un cantidad k, y muestra los ultimos k mensajes enviados por ese numerodb.colletionprueba.find({fecha:"numero"},{}).limit("k").pretty()",
+    "query": "db.colletionprueba.find({fecha:"2017-31-05"},{}).limit("5")"
+  }
+  {
+    "name": "Ultimos k mensajes de un numero",
+    "database": "postgres",
+    "description":
+      "Recive un numero x y un cantidad k, y muestra los ultimos k mensajes enviados por ese numero",
+    "query": "db.colletionprueba.find({"numero":"numero"},{}).limit("5")"
   }
 ]
