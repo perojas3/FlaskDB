@@ -19,10 +19,11 @@
     "query": "SELECT * FROM mytable WHERE nombre='Sebastián';"
   },
   {
-    "name": "Quiero todo de mongo 😄",
-    "database": "mongo",
-    "description": "...",
-    "query": "myCollection.find()"
+    "name": "Obtener hotel",
+    "database": "postgres",
+    "description":
+      "Recive una fecha x y una cidudad y, y retorna los hoteles en los que se hubo un hospedaje en dicha fecha y ciudad",
+    "query": "SELECT Hotel.nombre FROM Hotel,Hospedaje WHERE Hotel.hid=Hospedaje.hid AND Hospedaje.fecha <= x AND Hospedaje.fecha + Hospedaje.dias >= x AND Hotel.cidudad = y;"
   },
   {
     "name": "Insertar a mongo",
