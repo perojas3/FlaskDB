@@ -1,23 +1,34 @@
 [
   {
-    "name": "Mensajes de una fecha",
+    "name": "Seleccionar todo",
+    "database": "postgres",
+    "description": "Una muy breve descripción",
+    "query": "SELECT * FROM mytable;"
+  },
+  {
+  "name": "Lorem ipsum dolor sit amet",
+  "database": "mongo",
+  "description":
+  "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
+  "query": "myCollection.find( {\"attribute\": \"value\"} )"
+  },
+  {
+    "name": "Sebastián",
+    "database": "postgres",
+    "description": "Una consulta de Sebastián 🙋",
+    "query": "SELECT * FROM mytable WHERE nombre='Sebastián';"
+  },
+  {
+    "name": "Quiero todo de mongo 😄",
+    "database": "mongo",
+    "description": "...",
+    "query": "myCollection.find()"
+  },
+  {
+    "name": "Insertar a mongo",
     "database": "mongo",
     "description":
-      "Recive una fecha x y retorna los numeros de los que tienen mensajes en esa fechas",
-    "query": "db.colletionprueba.find({fecha:"2017-31-05"},{})"
-  },
-  {
-    "name": "Ultimos k mensajes de un numero",
-    "database": "postgres",
-    "description":
-      "Recive un numero x y un cantidad k, y muestra los ultimos k mensajes enviados por ese numerodb.colletionprueba.find({fecha:"numero"},{}).limit("k").pretty()",
-    "query": "db.colletionprueba.find({fecha:"2017-31-05"},{}).limit("5")"
-  },
-  {
-    "name": "Ultimos k mensajes de un numero",
-    "database": "postgres",
-    "description":
-      "Recive un numero x y un cantidad k, y muestra los ultimos k mensajes enviados por ese numero",
-    "query": "db.colletionprueba.find({"numero":"numero"},{}).limit("5")"
+      "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
+    "query": "myCollection.insert( { \"attribute\": \"value\" } )"
   }
 ]
