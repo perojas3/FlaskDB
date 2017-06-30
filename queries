@@ -5,14 +5,14 @@
     "description":
       "Recive una fecha x y retorna los numeros de los que tienen mensajes en esa fechas",
     "query": "db.colletionprueba.find({fecha:"2017-31-05"},{})"
-  }
+  },
   {
     "name": "Ultimos k mensajes de un numero",
     "database": "postgres",
     "description":
       "Recive un numero x y un cantidad k, y muestra los ultimos k mensajes enviados por ese numerodb.colletionprueba.find({fecha:"numero"},{}).limit("k").pretty()",
     "query": "db.colletionprueba.find({fecha:"2017-31-05"},{}).limit("5")"
-  }
+  },
   {
     "name": "Ultimos k mensajes de un numero",
     "database": "postgres",
